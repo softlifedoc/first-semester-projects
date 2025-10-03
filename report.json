@@ -1,0 +1,10 @@
+{
+    "total_products_sold": 22,
+    "most_popular_product": 2,
+    "revenue_per_customer": {
+        "1": 16.5,
+        "2": 6.0,
+        "3": 18.0,
+        "4": 9.0
+    }
+}
