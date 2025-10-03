@@ -23,7 +23,6 @@ def flag_large_orders(orders, prices):
 
 flag_large_orders(new_orders, product_prices)
 
-# Converting to eur and applying discounts
 exchange_rate = 0.85  # USD to EUR
 discounted_orders = []
 for order in new_orders:
@@ -43,7 +42,7 @@ for order in new_orders:
 for order in discounted_orders:
     print(f"Order {order['order_id']} Total: {order['total_eur']:.2f} EUR, Discount: {order['discount_applied']}%")
 
-# Combine original and new orders
+# Combining original and new orders
 all_orders = [
     {"customer_id": 1, "product_id": 1, "quantity": 2},
     {"customer_id": 2, "product_id": 2, "quantity": 3},
@@ -72,7 +71,7 @@ report = {
 
 print("Report:", report)
 
-# Save to JSON and print formatted summary
+
 import json
 with open("report.json", "w") as f:
     json.dump(report, f, indent=4)
